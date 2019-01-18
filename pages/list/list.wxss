@@ -1,0 +1,110 @@
+.section-banner {
+    height: 24vh;
+    border: 1rpx solid #000000;
+}
+
+.section-category,
+.section-category-list-group {
+    overflow: auto;
+}
+
+.section-category-tab {
+    width: 20vw;
+    float: left;
+    min-height: 75vh;
+    background-color: #ecebeb;
+}
+
+.section-category-tab-item {
+    padding: 15rpx;
+    font-size: 24rpx;
+    position: relative;
+}
+
+.border-bottom:after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    left: 0;
+    bottom: 0;
+    border-bottom: 1px solid #cccccc;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scale(0.5, 0.5);
+    -ms-transform: scale(0.5, 0.5);
+    -o-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.section-category-tab-item-active {
+    background-color: #ffffff;
+    color: red;
+}
+
+.section-category-list {
+    width: 80vw;
+    float: right;
+    min-height: 75vh;
+}
+
+.section-category-list .wux-cell-group__hd {
+    padding: 15rpx;
+    font-size: 24rpx;
+    text-align: center;
+    background: #faf9f9;
+    /* background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.9, transparent), color-stop(0.1, red)); */
+}
+
+.section-category-list-group .wux-input-number__input {
+    padding: 0;
+}
+
+.section-category-list-group-img {
+    width: 29%;
+    height: 120rpx;
+    float: left;
+    padding: 0 20rpx 0 0;
+}
+
+.section-category-list-group-img image {
+    width: 100%;
+    height: 100%;
+}
+
+.section-category-list-group-detail {
+    width: 30.3%;
+    height: 120rpx;
+    line-height: 40rpx;
+    overflow: hidden;
+    float: left;
+    padding: 0 20rpx 0 0;
+    font-size: 24rpx;
+}
+
+.section-category-list-group-num {
+    width: 31%;
+    float: right;
+    padding: 0;
+    margin-top: 60rpx;
+}
+
+.section-category-list-group-detail-title {
+    font-size: 26rpx;
+}
+
+.section-category-list-group-detail-sales {
+    font-size: 24rpx;
+    color: #cccccc;
+}
+
+.section-category-list-group-detail-price {
+    color: red;
+    font-size: 30rpx;
+}

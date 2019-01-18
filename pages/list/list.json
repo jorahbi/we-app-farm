@@ -1,0 +1,13 @@
+{
+    "navigationBarTitleText": "Refresher",
+    "usingComponents": {
+        "wux-refresher": "/component/refresher/index",
+        "wux-spin": "/component/spin/index",
+        "wux-cell-group": "/component/cell-group/index",
+        "wux-cell": "/component/cell/index",
+        "wux-icon": "/component/icon/index",
+        "wux-button": "/component/button/index",
+        "wux-input-number": "/component/input-number/index"
+    },
+    "onReachBottomDistance": 40
+}
