@@ -1,13 +1,13 @@
 {
-    "navigationBarTitleText": "Refresher",
+    "navigationBarTitleText": "菜品列表",
     "usingComponents": {
-        "wux-refresher": "/component/refresher/index",
-        "wux-spin": "/component/spin/index",
         "wux-cell-group": "/component/cell-group/index",
         "wux-cell": "/component/cell/index",
         "wux-icon": "/component/icon/index",
+        "wux-col": "/component/col/index",
         "wux-button": "/component/button/index",
-        "wux-input-number": "/component/input-number/index"
+        "wux-input-number": "/component/input-number/index",
+        "wux-badge": "/component/badge/index"
     },
-    "onReachBottomDistance": 40
+    "onReachBottomDistance": 120
 }

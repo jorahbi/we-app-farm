@@ -1,0 +1,41 @@
+<wux-select id="wux-select1" />
+<view class="order">
+    <wux-row class="order-table">
+        <wux-col span="9">
+            <wux-cell-group>
+                <wux-cell title="选择桌号" extra="{{ title2 }}" bind:click="onClick2">  </wux-cell>
+            </wux-cell-group>   
+        </wux-col>
+        <wux-col span="3" class="order-table-qr">
+            <wux-cell-group>
+                <wux-cell  bindtap="bindViewTap">
+                    <wux-icon size="inherit" color="red" type="md-qr-scanner" />扫
+                </wux-cell>
+            </wux-cell-group>
+        </wux-col>
+    </wux-row>
+    <view class="margin-space"></view>
+    <wux-cell-group>
+                <wux-cell>
+    <wux-row class="order-detail">
+        <wux-col span="3">
+            <view class="order-detail-img">
+                <image />
+            </view>
+        </wux-col>
+        <wux-col span="7">
+            <view class="order-detail-goods">
+                <view class="">凉拌藕片</view>
+                <view class="">x100</view>
+            </view>
+        </wux-col>
+        <wux-col span="2">
+            <view class="order-detail-price">
+                ￥1
+            </view>
+        </wux-col>
+    </wux-row>
+     </wux-cell>
+    </wux-cell-group>
+               
+</view>

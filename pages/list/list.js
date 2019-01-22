@@ -1,58 +1,35 @@
+
 Page({
     data: {
-        items: [{
-                title: new Date,
-                content: '由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。',
-            },
-            {
-                title: new Date,
-                content: '由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。',
-            },
-            {
-                title: new Date,
-                content: '由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。',
-            },
-            {
-                title: new Date,
-                content: '由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。',
-            },
-            {
-                title: new Date,
-                content: '由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。',
-            },
-            {
-                title: new Date,
-                content: '由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。',
-            },
-            {
-                title: new Date,
-                content: '由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。',
-            }
-        ]
+        toView: 'green',
+        scrollTop: 0,
+        bannerHeight: '24vh',
+        animationMiddleHeaderItem: {}
     },
-    onLoad() {},
-    onReady: function() {
-        this.wuxRefresher = this.selectComponent("#wux-refresher");
+    upper(e) {
+        console.log(e)
     },
-    onPulling() {
-        console.log('onPulling')
+    lower(e) {
+        console.log(e)
     },
-    onRefresh() {
-        console.log('onRefresh')
-        wx.showLoading({
-            title: '加载中',
-            mask: true
-        })
-        setTimeout(() => {
+    scroll(e) {
+        let that = this;
+        // setTimeout(() => {
+        //     //wx.createSelectorQuery().select('#section-banner')
+        //     that.setData({
+        //         bannerHeight: '0vh'
+        //     });
+        // }, 2000);
+        console.log('scroll', e.detail.scrollTop, e.currentTarget.offsetTop)
+    },
+    tap(e) {
+        let dataset = e.currentTarget.dataset;
+        console.log(this.data.toView, dataset.tag);
+        if (this.data.toView !== dataset.tag) {
             this.setData({
-                items: [{
-                    title: new Date,
-                    content: '由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。',
-                }, ...this.data.items],
+                toView: dataset.tag
             })
-            this.wuxRefresher.finishPullToRefresh();
-            wx.hideLoading();
-        }, 500)
+        }
     },
     onReachBottom(e) {
         wx.showLoading({

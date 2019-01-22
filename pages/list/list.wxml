@@ -1,75 +1,49 @@
-<view class="section-banner">banner</view>
+<view class="section-banner" style="height: {{ bannerHeight }}" >banner</view>
 <view class="section-category">
-    <view class="section-category-tab">
-        <view class="section-category-tab-item section-category-tab-item-active">凉拌菜</view>
-        <view class="section-category-tab-item border-bottom">川湘小炒</view>
-        <view class="section-category-tab-item border-bottom">主食</view>
-        <view class="section-category-tab-item border-bottom"></view>
-    </view>
-    <view class="section-category-list">
-        <wux-refresher id="wux-refresher" bind:pulling="onPulling" bind:refresh="onRefresh" disablePullingRotation="true" distance="40"
-                        refreshingIcon= "icon" refreshingText="" pullingText="">
-            <view class="weui-panel weui-panel_access">
-                <view class="section-category-list-group">
-                    <wux-cell-group title="凉拌菜">
-                         <wux-cell>
-                             <view class="section-category-list-group-img"><image  /></view>
-                             <view class="section-category-list-group-detail">
+    <scroll-view scroll-y class="section-category-tab">
+        <view bindtap="tap" data-tag="green" class="section-category-tab-item section-category-tab-item-active">凉拌菜</view>
+        <view bindtap="tap" data-tag="red" class="section-category-tab-item border-bottom">川湘小炒</view>
+        <view bindtap="tap" data-tag="yellow" class="section-category-tab-item border-bottom">主食</view>
+        <view bindtap="tap" data-tag="blue" class="section-category-tab-item border-bottom"></view>
+    </scroll-view>
+    <scroll-view scroll-y  class="section-category-list" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+        <view id="green" class="section-category-list-group">
+            <wux-cell-group title="凉拌菜">
+                <wux-cell>
+                    <wux-row>
+                        <wux-col span="3">
+                            <view class="section-category-list-group-img">
+                                <image />
+                            </view>
+                        </wux-col>
+                        <wux-col span="5">
+                            <view class="section-category-list-group-detail">
                                 <view class="section-category-list-group-detail-title">凉拌藕片</view>
                                 <view class="section-category-list-group-detail-sales">月销 100</view>
                                 <view class="section-category-list-group-detail-price">￥20</view>
-                             </view>
-                             <view class="section-category-list-group-num">
-                                <wux-input-number min="0" color="balanced"  bind:change="addCat" slot="footer" />
-                             </view>
-                         </wux-cell>
-                                                  <wux-cell>
-                             <view class="section-category-list-group-img">
-                                 <image />
-                             </view>
-                             <view class="section-category-list-group-detail">
-                                 <view class="section-category-list-group-detail-title">凉拌藕片</view>
-                                 <view class="section-category-list-group-detail-sales">
-                                     月销 100
-                                 </view>
-                                 <view class="section-category-list-group-detail-price">￥20</view>
-                             </view>
-                             <view class="section-category-list-group-num">
-                                 <wux-input-number min="0" color="balanced" bind:change="addCat" slot="footer" />
-                             </view>
-                         </wux-cell>
-                     </wux-cell-group>
-                                <wux-cell-group title="凉拌菜">
-                    <wux-cell>
-                        <view class="section-category-list-group-img">
-                            <image />
-                        </view>
-                        <view class="section-category-list-group-detail">
-                            <view class="section-category-list-group-detail-title">凉拌藕片</view>
-                            <view class="section-category-list-group-detail-sales">月销 100</view>
-                            <view class="section-category-list-group-detail-price">￥20</view>
-                        </view>
-                        <view class="section-category-list-group-num">
-                            <wux-input-number min="0" color="balanced" bind:change="addCat" slot="footer" />
-                        </view>
-                    </wux-cell>
-                    <wux-cell>
-                        <view class="section-category-list-group-img">
-                            <image />
-                        </view>
-                        <view class="section-category-list-group-detail">
-                            <view class="section-category-list-group-detail-title">凉拌藕片</view>
-                            <view class="section-category-list-group-detail-sales">月销 100</view>
-                            <view class="section-category-list-group-detail-price">￥20</view>
-                        </view>
-                        <view class="section-category-list-group-num">
-                            <wux-input-number min="0" color="balanced" bind:change="addCat" slot="footer" />
-                        </view>
-                    </wux-cell>
-                </wux-cell-group>
-                </view>
+                            </view>
+                        </wux-col>
+                        <wux-col span="4">
+                            <view class="section-category-list-group-num">
+                                <wux-input-number min="0" color="balanced" bind:change="addCat" slot="footer" />
+                            </view>
+                        </wux-col>
+                    </wux-row>
+                </wux-cell>
                 
+                </wux-cell-group>
             </view>
-        </wux-refresher>
+            
+    </scroll-view>
+</view>
+
+<view class="section-cart">
+    <view class="section-cart-cart">
+        <view class="section-cart-icon"><wux-icon type="md-cart" />
+                <wux-badge count="10" overflow-count="1024">
+            <view class="example__badge"></view>
+        </wux-badge></view>
+        <view class="section-cart-price">￥120.00</view>
     </view>
+    <view class="section-cart-sub">选好了</view> 
 </view>

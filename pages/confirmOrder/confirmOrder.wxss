@@ -1,0 +1,35 @@
+
+.order-table-qr {
+    text-align: center;
+    color: hsla(0, 0%, 100%, 0);
+}
+
+.margin-space {
+    background-color: #dbdada;
+    height: 10rpx;
+}
+
+.order-detail {
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.order-detail-img image{
+    width: 100rpx;
+    height: 100rpx;
+    margin: auto;
+}
+
+.order-detail-goods {
+    height: 100rpx;
+    line-height: 50rpx;
+    overflow: hidden;
+}
+
+.order-detail-price{
+    text-align: center;
+    line-height: 100rpx;
+    overflow: hidden;
+    vertical-align: middle;
+    color: red;
+}

@@ -1,0 +1,11 @@
+{
+     "navigationBarTitleText": "确认订单",
+      "usingComponents": {
+            "wux-cell-group": "/component/cell-group/index",
+            "wux-cell": "/component/cell/index",
+            "wux-select": "/component/select/index",
+            "wux-row": "/component/row/index",
+            "wux-col": "/component/col/index",
+            "wux-icon": "/component/icon/index"
+      }
+}

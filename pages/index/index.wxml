@@ -9,6 +9,7 @@
     </view>
     <navigator url="/pages/category/category?a={{motto}}">test</navigator>
     <navigator url="/pages/list/list?a={{motto}}">list</navigator>
+    <navigator url="/pages/confirmOrder/confirmOrder">confirmOrder</navigator>
     <view class="usermotto">
         <text class="user-motto">{{motto}}</text>
     </view>

@@ -1,17 +1,19 @@
 .section-banner {
-    height: 24vh;
-    border: 1rpx solid #000000;
+    background-color: green;
 }
 
 .section-category,
 .section-category-list-group {
     overflow: auto;
 }
+.section-category{
+    padding-bottom: 80rpx;
+}
 
 .section-category-tab {
     width: 20vw;
     float: left;
-    min-height: 75vh;
+    min-height: 100vh;
     background-color: #ecebeb;
 }
 
@@ -51,7 +53,7 @@
 .section-category-list {
     width: 80vw;
     float: right;
-    min-height: 75vh;
+    height: 100vh;
 }
 
 .section-category-list .wux-cell-group__hd {
@@ -67,30 +69,28 @@
 }
 
 .section-category-list-group-img {
-    width: 29%;
     height: 120rpx;
-    float: left;
     padding: 0 20rpx 0 0;
 }
 
 .section-category-list-group-img image {
-    width: 100%;
-    height: 100%;
+    width: 120rpx;
+    height: 120rpx;
+    margin: auto;
+    line-height: 120rpx;
+    overflow: hidden;
+    vertical-align: middle;
 }
 
 .section-category-list-group-detail {
-    width: 30.3%;
     height: 120rpx;
     line-height: 40rpx;
     overflow: hidden;
-    float: left;
     padding: 0 20rpx 0 0;
     font-size: 24rpx;
 }
 
 .section-category-list-group-num {
-    width: 31%;
-    float: right;
     padding: 0;
     margin-top: 60rpx;
 }
@@ -107,4 +107,53 @@
 .section-category-list-group-detail-price {
     color: red;
     font-size: 30rpx;
+}
+
+.section-cart {
+    position: fixed;
+    z-index: 9999;
+    bottom: 0;
+    height: 90rpx;
+    width: 100vw;
+    background-color: #2a2b2a;
+}
+
+.section-cart-cart, .section-cart-sub{
+    float: left;
+    color: #ffffff;
+    line-height: 90rpx;
+    overflow: hidden;
+}
+.section-cart-icon{
+    position: absolute;
+    bottom: 30rpx;
+    left: 40rpx;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    width: 100rpx;
+    height: 100rpx;
+    color:red;
+    background-color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 120rpx;
+}
+
+.section-cart-icon .ion-md-cart {
+    font-size: 50rpx !important;
+}
+.section-cart-price {
+    margin-left: 150rpx;
+}
+.section-cart-sub {
+    float: right;
+    background-color: #fa3434;
+    width: 200rpx;
+    height: 100%;
+    font-size: 28rpx;
+    text-align: center;
+}
+.section-cart-cart .wux-badge {
+    position: absolute;
+    top: -2rpx;
 }
